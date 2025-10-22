@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genshin Impact Services - Hoyo Piloting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/genshin.css" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header>
+      <nav>
+        <div class="weblogo-container">
+          <div class="weblogo-frame">
+            <img src="img/weblogo.png" alt="Logo" class="logo" />
+          </div>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="banner">
+      <img src="img/genshin banner.png" alt="Genshin Impact Banner" />
+    </div>
+    <main class="services-container">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <div class="game-info">
+          <img
+            src="/img/paimon logo.png"
+            alt="Genshin Impact"
+            class="game-icon"
+          />
+          <h2>Genshin Impact</h2>
+        </div>
+        <div class="how-to-order">
+          <h3>How to order</h3>
+          <ol>
+            <li>Select the service you want.</li>
+            <li>Complete your payment.</li>
+            <li>The service will be added to your service catalog.</li>
+            <li>
+              We will contact you when we are ready to do the service and ask a
+              few questions before proceeding.
+            </li>
+          </ol>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <section class="content">
+        <form id="serviceForm">
+          <!-- Choose a Service -->
+          <div class="service-section">
+            <h2>Choose a service</h2>
+
+            <!-- Maintenance -->
+            <div class="service-category">
+              <h3>Maintenance</h3>
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="maintenance"
+                  data-service="daily"
+                  data-price="57"
+                >
+                  <span>Daily</span>
+                  <span class="price">₱57</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="maintenance"
+                  data-service="weekly"
+                  data-price="300"
+                >
+                  <span>Weekly</span>
+                  <span class="price">₱300</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="maintenance"
+                  data-service="monthly"
+                  data-price="1300"
+                >
+                  <span>Monthly</span>
+                  <span class="price">₱1,300</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="maintenance"
+                  data-service="full-patch"
+                  data-price="700"
+                >
+                  <span>Full Patch (6 weeks)</span>
+                  <span class="price">₱700</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Regular Quests -->
+            <div class="service-category">
+              <h3>Regular Quests</h3>
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="quests"
+                  data-service="short"
+                  data-price="50"
+                >
+                  <span>Short quests (1-2 parts)</span>
+                  <span class="price">₱50</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="quests"
+                  data-service="long"
+                  data-price="170"
+                >
+                  <span
+                    >Long quests (multiple parts, lots of
+                    dialogue/fighting)</span
+                  >
+                  <span class="price">₱170</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Events -->
+            <div class="service-category">
+              <h3>Events</h3>
+              <ul class="event-note">
+                <li>*If the event hasn't been touched</li>
+                <li>*If the event is halfway done</li>
+              </ul>
+              <!-- <span class="event-note">*If the event hasn't been touched</span>
+              <span class="event-note">*If the event is halfway done</span> -->
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="events"
+                  data-service="light"
+                  data-price="120"
+                >
+                  <span>Light events</span>
+                  <span class="price">₱120</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="events"
+                  data-service="full"
+                  data-price="120"
+                >
+                  <span>Full event</span>
+                  <span class="price">₱120</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="events"
+                  data-service="light-half"
+                  data-price="100"
+                >
+                  <span>Light events</span>
+                  <span class="price">₱100</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="events"
+                  data-service="full-half"
+                  data-price="200"
+                >
+                  <span>Full event</span>
+                  <span class="price">₱200</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Endgame -->
+            <div class="service-category">
+              <h3>Endgame</h3>
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="endgame"
+                  data-service="spiral"
+                  data-price="120"
+                >
+                  <span>Spiral abyss</span>
+                  <span class="price">₱120</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="endgame"
+                  data-service="imaginarium"
+                  data-price="120"
+                >
+                  <span>Imaginarium Theater</span>
+                  <span class="price">₱120</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="endgame"
+                  data-service="stygian"
+                  data-price="120"
+                >
+                  <span>Stygian Onslaught</span>
+                  <span class="price">₱120</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Explorations -->
+            <div class="service-category">
+              <h3>Explorations</h3>
+              <p style="font-size: 14px; color: #666; margin-bottom: 15px">
+                Select regions for your services
+              </p>
+              <div class="exploration-grid">
+                <div class="exploration-card" data-region="mondstadt">
+                  <div class="exploration-image mondstadt-bg"></div>
+                  <h4>Mondstadt</h4>
+                </div>
+                <div class="exploration-card" data-region="liyue">
+                  <div class="exploration-image liyue-bg"></div>
+                  <h4>Liyue</h4>
+                </div>
+                <div class="exploration-card" data-region="inazuma">
+                  <div class="exploration-image inazuma-bg"></div>
+                  <h4>Inazuma</h4>
+                </div>
+                <div class="exploration-card" data-region="fontaine">
+                  <div class="exploration-image fontaine-bg"></div>
+                  <h4>Fontaine</h4>
+                </div>
+                <div class="exploration-card" data-region="natlan">
+                  <div class="exploration-image natlan-bg"></div>
+                  <h4>Natlan</h4>
+                </div>
+                <div class="exploration-card" data-region="nod-krai">
+                  <div class="exploration-image nod-krai-bg"></div>
+                  <h4>Nod Krai</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unlocking Waypoints & Statues -->
+            <div class="service-category">
+              <h3>Unlocking Waypoints & Statues</h3>
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="waypoints"
+                  data-service="small"
+                  data-price="70"
+                >
+                  <span>Small Area</span>
+                  <span class="price">₱70</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="waypoints"
+                  data-service="full"
+                  data-price="70"
+                >
+                  <span>Full Region</span>
+                  <span class="price">₱70</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Chest Farming -->
+            <div class="service-category">
+              <h3>Chest Farming</h3>
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="chest"
+                  data-service="light"
+                  data-price="120"
+                >
+                  <span>Light farming (30 chests)</span>
+                  <span class="price">₱120</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="chest"
+                  data-service="full"
+                  data-price="120"
+                >
+                  <span>Full chest run (as many as possible in a region)</span>
+                  <span class="price">₱120</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Collecting Oculi -->
+            <div class="service-category">
+              <h3>Collecting oculi</h3>
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="oculi"
+                  data-service="one"
+                  data-price="170"
+                >
+                  <span>1 Region</span>
+                  <span class="price">₱170</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="oculi"
+                  data-service="full"
+                  data-price="120"
+                >
+                  <span>Full map(all available oculi)</span>
+                  <span class="price">₱120</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 100% Area Completion -->
+            <div class="service-category">
+              <h3>100% Area Completion</h3>
+              <div class="service-options">
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="completion"
+                  data-service="small"
+                  data-price="170"
+                >
+                  <span>Small area/ex. Starfell Valley</span>
+                  <span class="price">₱170</span>
+                </button>
+                <button
+                  type="button"
+                  class="service-btn"
+                  data-category="completion"
+                  data-service="whole"
+                  data-price="120"
+                >
+                  <span>Whole region</span>
+                  <span class="price">₱120</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Method -->
+          <div class="payment-section">
+            <h2>Choose Payment Method</h2>
+
+            <!-- OR Payment -->
+            <div class="payment-type">
+              <h3>QR</h3>
+              <div class="payment-options">
+                <div class="payment-option">
+                  <input
+                    type="radio"
+                    id="gcash-or"
+                    name="payment-method"
+                    value="gcash-or"
+                  />
+                  <label for="gcash-or">
+                    <strong>Gcash</strong>
+                    <input
+                      type="text"
+                      placeholder="Gcash"
+                      class="payment-input"
+                    />
+                  </label>
+                </div>
+                <div class="payment-option">
+                  <input
+                    type="radio"
+                    id="paypal-or"
+                    name="payment-method"
+                    value="paypal-or"
+                  />
+                  <label for="paypal-or">
+                    <strong>Paypal</strong>
+                    <input
+                      type="text"
+                      placeholder="Paypal"
+                      class="payment-input"
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- E-wallet Payment -->
+            <div class="payment-type">
+              <h3>E-wallet</h3>
+              <div class="payment-options">
+                <div class="payment-option">
+                  <input
+                    type="radio"
+                    id="gcash-wallet"
+                    name="payment-method"
+                    value="gcash-wallet"
+                  />
+                  <label for="gcash-wallet">
+                    <strong>Gcash</strong>
+                    <input
+                      type="text"
+                      placeholder="Gcash"
+                      class="payment-input"
+                    />
+                  </label>
+                </div>
+                <div class="payment-option">
+                  <input
+                    type="radio"
+                    id="paypal-wallet"
+                    name="payment-method"
+                    value="paypal-wallet"
+                  />
+                  <label for="paypal-wallet">
+                    <strong>Paypal</strong>
+                    <input
+                      type="text"
+                      placeholder="Paypal"
+                      class="payment-input"
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div id="selectedServices"></div>
+            <div class="total-price">
+              <strong>Total: ₱<span id="totalPrice">0</span></strong>
+            </div>
+          </div>
+
+          <!-- Order Confirmation -->
+          <div class="order-confirmation">
+            <h2>Order Confirmation</h2>
+            <p>
+              By availing the service I automatically agree
+              <a href="#">Terms of Service</a>
+            </p>
+            <button type="submit" class="submit-btn">Get Service</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>2025 Copyright. All rights reserved.</p>
+    </footer>
+
+    <script src="js/genshin.js"></script>
+  </body>
+</html>
