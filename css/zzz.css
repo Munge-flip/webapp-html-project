@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Syne', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+    min-height: 100vh;
+}
+
+/* Header Navigation - Matching index.html */
+header {
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 10vh;
+}
+
+header nav .weblogo-container {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+header nav .weblogo-frame {
+    overflow: hidden;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+header nav .logo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+header nav ul li a:hover {
+    color: #a78bfa;
+    background-color: rgba(167, 139, 250, 0.1);
+}
+
+/* Banner - Full Width */
+.banner {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Container */
+.services-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    height: fit-content;
+    position: sticky;
+    top: calc(10vh + 20px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.game-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #a78bfa;
+}
+
+.game-info h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.how-to-order h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.how-to-order ol {
+    padding-left: 20px;
+}
+
+.how-to-order li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Sections */
+.service-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    border-bottom: 3px solid #a78bfa;
+    padding-bottom: 10px;
+}
+
+.service-category {
+    margin-bottom: 35px;
+}
+
+.service-category h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.event-note {
+    display: flex;
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0px 150px;
+}
+
+.service-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.service-btn {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px 20px;
+    background: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+}
+
+.service-btn:hover {
+    background: #fff;
+    border-color: #a78bfa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(167, 139, 250, 0.3);
+}
+
+.service-btn.selected {
+    background: #a78bfa;
+    border-color: #a78bfa;
+    color: white;
+    font-weight: 600;
+}
+
+.service-btn .price {
+    font-weight: 700;
+    color: #333;
+}
+
+.service-btn.selected .price {
+    color: white;
+}
+
+/* Mode Selection Cards (Similar to world cards) */
+.mode-selection {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.mode-card {
+    flex: 1;
+    min-width: 180px;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.mode-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mode-card.selected {
+    border-color: #a78bfa;
+    box-shadow: 0 8px 20px rgba(167, 139, 250, 0.5);
+    transform: translateY(-5px);
+}
+
+.mode-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Payment Section */
+.payment-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.payment-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.payment-type {
+    margin-bottom: 25px;
+}
+
+.payment-type h3 {
+    background: #ffa500;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.payment-options {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 0 0 8px 8px;
+}
+
+.payment-option {
+    flex: 1;
+}
+
+.payment-option label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-option strong {
+    color: #333;
+    font-size: 16px;
+}
+
+.payment-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+}
+
+.payment-input:focus {
+    outline: none;
+    border-color: #a78bfa;
+}
+
+/* Order Summary */
+.order-summary {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border-left: 4px solid #a78bfa;
+}
+
+.order-summary h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#selectedServices {
+    margin-bottom: 15px;
+}
+
+.selected-item {
+    padding: 8px 0;
+    color: #555;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price {
+    font-size: 22px;
+    color: #333;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+    text-align: right;
+}
+
+/* Order Confirmation */
+.order-confirmation {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.order-confirmation h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.order-confirmation p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.order-confirmation a {
+    color: #a78bfa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.order-confirmation a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Syne', sans-serif;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 10vh;
+    background: rgba(30, 30, 30, 0.95);
+    color: #aaa;
+    border-top: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-options {
+        flex-direction: column;
+    }
+
+    .service-btn {
+        min-width: 100%;
+    }
+
+    .mode-selection {
+        flex-direction: column;
+    }
+
+    .mode-card {
+        min-width: 100%;
+    }
+
+    .payment-options {
+        flex-direction: column;
+    }
+
+    header nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    header nav .weblogo-container {
+        height: auto;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+}

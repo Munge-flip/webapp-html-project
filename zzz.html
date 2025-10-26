@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenless Zone Zero Services - Hoyo Piloting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/zzz.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="weblogo-container">
+                <div class="weblogo-frame">
+                    <img src="img/weblogo.png" alt="Logo" class="logo">
+                </div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Track Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <img src="/img/zzz banner.png" alt="Zenless Zone Zero Banner">
+    </div>
+
+    <main class="services-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="game-info">
+                <img src="/img/zzz icon.png" alt="Zenless Zone Zero" class="game-icon">
+                <h2>Zenless Zone Zero</h2>
+            </div>
+            <div class="how-to-order">
+                <h3>How to get started</h3>
+                <ol>
+                    <li>Select the service you want.</li>
+                    <li>Complete your payment.</li>
+                    <li>The service will be added to your service catalog.</li>
+                    <li>Wait for an agent to confirm and ask a few questions before proceeding.</li>
+                </ol>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="content">
+            <form id="serviceForm">
+                <!-- Choose a Service -->
+                <div class="service-section">
+                    <h2>Choose a service</h2>
+                    
+                    <!-- Maintenance -->
+                    <div class="service-category">
+                        <h3>Maintenance</h3>
+                        <div class="service-options">
+                            <button type="button" class="service-btn" data-category="maintenance" data-service="daily" data-price="57">
+                                <span>Daily</span>
+                                <span class="price">₱57</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="maintenance" data-service="weekly" data-price="300">
+                                <span>Weekly</span>
+                                <span class="price">₱300</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="maintenance" data-service="monthly" data-price="1300">
+                                <span>Monthly</span>
+                                <span class="price">₱1,300</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="maintenance" data-service="full-patch" data-price="1700">
+                                <span>Full Patch (6 weeks)</span>
+                                <span class="price">₱1,700</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Regular Quests -->
+                    <div class="service-category">
+                        <h3>Regular Quests</h3>
+                        <div class="service-options">
+                            <button type="button" class="service-btn" data-category="quests" data-service="short" data-price="60">
+                                <span>Short quests (1-2 parts)</span>
+                                <span class="price">₱60</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="quests" data-service="long" data-price="170">
+                                <span>Long quests (multiple parts, lots of dialogue/fighting)</span>
+                                <span class="price">₱170</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Events -->
+                    <div class="service-category">
+                        <h3>Events</h3>
+                        <ul class="event-note">
+                            <li>*If the event hasn't been touched</li>
+                            <li>*If the event is halfway done</li>
+                        </ul>              
+                        <!-- <p class="event-note">*If the event hasn't been touched</p>
+                        <p class="event-note">*If the event is halfway done</p> -->
+                        <div class="service-options">
+                            <button type="button" class="service-btn" data-category="events" data-service="light" data-price="120">
+                                <span>Light events</span>
+                                <span class="price">₱120</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="events" data-service="full" data-price="120">
+                                <span>Full event</span>
+                                <span class="price">₱120</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="events" data-service="light-half" data-price="100">
+                                <span>Light events</span>
+                                <span class="price">₱100</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="events" data-service="full-half" data-price="200">
+                                <span>Full event</span>
+                                <span class="price">₱200</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Endgame -->
+                    <div class="service-category">
+                        <h3>Endgame</h3>
+                        <div class="service-options">
+                            <button type="button" class="service-btn" data-category="endgame" data-service="shiyu-defense" data-price="150">
+                                <span>Shiyu Defense</span>
+                                <span class="price">₱150</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="endgame" data-service="deadly-assault" data-price="150">
+                                <span>Deadly Assault</span>
+                                <span class="price">₱150</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Hollow Zero -->
+                    <div class="service-category">
+                        <h3>Hollow Zero</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Choose a Mode</p>
+                        
+                        <!-- Mode Selection (No pricing - just selection) -->
+                        <div class="mode-selection">
+                            <div class="mode-card" data-mode="lost-void">
+                                <div class="mode-label">Lost Void</div>
+                            </div>
+                            <div class="mode-card" data-mode="withered-domain">
+                                <div class="mode-label">Withered Domain</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Level Selection (With pricing) -->
+                        <div class="service-options" style="margin-top: 20px;">
+                            <button type="button" class="service-btn" data-category="hollow-zero" data-service="20-levels" data-price="200">
+                                <span>20 levels</span>
+                                <span class="price">₱200</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="hollow-zero" data-service="full-level" data-price="1000">
+                                <span>Full level</span>
+                                <span class="price">₱1000</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Explorations -->
+                    <div class="service-category">
+                        <h3>Explorations</h3>
+                        
+                        <!-- 100% Area Completion -->
+                        <h4 style="font-size: 18px; margin-bottom: 15px; color: #666;">100% Area Completion</h4>
+                        <div class="service-options">
+                            <button type="button" class="service-btn" data-category="completion" data-service="one-location" data-price="170">
+                                <span>1 Location(ex. Sixth Street)</span>
+                                <span class="price">₱170</span>
+                            </button>
+                            <button type="button" class="service-btn" data-category="completion" data-service="whole-location" data-price="500">
+                                <span>Whole Location</span>
+                                <span class="price">₱500</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="payment-section">
+                    <h2>Choose Payment Method</h2>
+                    
+                    <!-- OR Payment -->
+                    <div class="payment-type">
+                        <h3>OR</h3>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <input type="radio" id="gcash-or" name="payment-method" value="gcash-or">
+                                <label for="gcash-or">
+                                    <strong>Gcash</strong>
+                                    <input type="text" placeholder="Gcash" class="payment-input">
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="paypal-or" name="payment-method" value="paypal-or">
+                                <label for="paypal-or">
+                                    <strong>Paypal</strong>
+                                    <input type="text" placeholder="Paypal" class="payment-input">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-wallet Payment -->
+                    <div class="payment-type">
+                        <h3>E-wallet</h3>
+                        <div class="payment-options">
+                            <div class="payment-option">
+                                <input type="radio" id="gcash-wallet" name="payment-method" value="gcash-wallet">
+                                <label for="gcash-wallet">
+                                    <strong>Gcash</strong>
+                                    <input type="text" placeholder="Gcash" class="payment-input">
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="paypal-wallet" name="payment-method" value="paypal-wallet">
+                                <label for="paypal-wallet">
+                                    <strong>Paypal</strong>
+                                    <input type="text" placeholder="Paypal" class="payment-input">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="selectedServices"></div>
+                    <div class="total-price">
+                        <strong>Total: ₱<span id="totalPrice">0</span></strong>
+                    </div>
+                </div>
+
+                <!-- Order Confirmation -->
+                <div class="order-confirmation">
+                    <h2>Order Confirmation</h2>
+                    <p>By availing the service I automatically agree <a href="#">Terms of Service</a></p>
+                    <button type="submit" class="submit-btn">Get Started</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 Copyright. All rights reserved.</p>
+    </footer>
+
+    <script src="js/zzz.js"></script>
+</body>
+</html>
